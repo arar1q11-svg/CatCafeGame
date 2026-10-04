@@ -1,0 +1,39 @@
+name: Publish web game
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - web/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload web game
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: web
+      - name: Publish game
+        id: deployment
+        uses: actions/deploy-pages@v4

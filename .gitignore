@@ -1,0 +1,10 @@
+/.godot/
+/.gradle/
+/android/
+/build/
+/web/*.import
+*.apk
+*.aab
+*.keystore
+*.p12
+*.dpapi

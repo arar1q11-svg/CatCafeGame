@@ -24,11 +24,12 @@ node .\tools\serve_web.js
 
 ## GitHub Pages 게시
 
-1. GitHub에서 `CatCafeGame` 이름의 **공개 저장소**를 만듭니다.
-2. 이 프로젝트의 내용을 저장소에 업로드하고 기본 브랜치에 반영합니다.
-3. 저장소의 **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택합니다.
-4. `.github/workflows/pages.yml`이 웹 게임을 자동으로 게시합니다.
-5. 저장소의 **Actions** 탭에서 `Publish web game`이 완료되면 `https://<GitHub-사용자명>.github.io/CatCafeGame/`에서 플레이할 수 있습니다.
+공개 저장소와 GitHub Actions 배포 설정은 이미 준비되어 있습니다.
+
+- 저장소: <https://github.com/arar1q11-svg/CatCafeGame>
+- 웹에서 플레이: <https://arar1q11-svg.github.io/CatCafeGame/>
+
+`web/` 또는 `.github/workflows/pages.yml`을 `main` 브랜치에 반영하면 `Publish web game` workflow가 자동으로 웹 버전을 게시합니다. 배포 진행 상황과 오류는 저장소의 **Actions** 탭에서 확인할 수 있습니다.
 
 GitHub Pages로 게시된 사이트는 인터넷에 공개됩니다. 저장소에는 게임 파일만 올리고, 서명 키나 비밀번호 파일은 절대 올리지 마세요.
 

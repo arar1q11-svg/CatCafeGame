@@ -33,6 +33,22 @@ node .\tools\serve_web.js
 
 GitHub Pages로 게시된 사이트는 인터넷에 공개됩니다. 저장소에는 게임 파일만 올리고, 서명 키나 비밀번호 파일은 절대 올리지 마세요.
 
+### Google 검색에 등록
+
+웹 내보내기에는 한국어 페이지 제목·설명, 게임 구조화 데이터, `robots.txt`, 사이트맵이 포함됩니다. 변경 사항이 게시된 후 [Google Search Console](https://search.google.com/search-console/)에서 URL 접두어 속성 `https://arar1q11-svg.github.io/CatCafeGame/`을 추가하고, 사이트맵 주소 `https://arar1q11-svg.github.io/CatCafeGame/sitemap.xml`을 제출하세요. 사이트 소유권 확인은 Google 계정 소유자가 직접 완료해야 합니다.
+
+Google이 색인을 만들고 `고양이 카페 키우기` 검색 결과에 반영하기까지 며칠 이상 걸릴 수 있으며, 사이트맵 제출만으로 노출 순위나 색인이 보장되지는 않습니다.
+
+### itch.io용 웹 게임 패키지
+
+최신 웹 게임을 itch.io에 올릴 ZIP 파일로 내보내려면 PowerShell에서 다음을 실행하세요.
+
+```powershell
+.\tools\package_itch.ps1
+```
+
+생성된 `CatCafeGame-html.zip`을 itch.io 프로젝트의 **HTML** 파일로 업로드하고 브라우저 내 실행을 켜면 됩니다.
+
 ## Windows에서 개발 및 Android 빌드
 
 - Godot Engine 4.7.2 Standard
